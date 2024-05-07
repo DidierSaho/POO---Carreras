@@ -13,22 +13,19 @@ public class CarreraDeCalle extends Carrera{
         corredores = new HashSet<>();
     }
 
+
     public void anotar(Corredor corredor) {
-       if (this.distancia >= 10 && corredor.certificadoAlDia) {
+       if (this.distancia >= 10 && corredor.getCertificado()) {
            corredores.add(corredor);
            corredor.aumentarCantidad();
+           corredor.agregarDistancia(this.distancia);
        } else if (this.distancia < 10) {
            corredores.add(corredor);
            corredor.aumentarCantidad();
+           corredor.agregarDistancia(this.distancia);
 
-       } else{
-           System.out.println("No tiene el certificado al dia");
        }
 
-    }
-
-    public Set<Corredor> obtenerCorredores(){
-        return corredores;
     }
 
     @Override

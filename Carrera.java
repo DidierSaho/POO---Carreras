@@ -8,10 +8,9 @@ public  abstract class Carrera {
         this.distancia = distancia;
     }
 
+
     public abstract void anotar(Corredor corredor);
-    public  void getDatosCarrera(){
-    System.out.println(this.nombre +' '+ this.distancia);
-    }
+
     public abstract void devolverParticipantes();
 
 }
