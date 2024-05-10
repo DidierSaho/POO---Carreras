@@ -12,15 +12,40 @@ public class main {
        calle.anotar(Didier);
        calle.anotar(Carlos);
        calle.anotar(Pedro); // No se anota porque su certificado no esta al dia.
-       calle.devolverParticipantes();
-       System.out.println();
+//       calle.devolverParticipantes();
+//       System.out.println();
 
        aventura.anotar(Didier);
        recreativa.anotar(Didier);
 
-       System.out.println(Didier.getPuntaje());
-       System.out.println(Didier.getCantidadCarreras());
+//       System.out.println(Didier.getPuntaje());
+//       System.out.println(Didier.getCantidadCarreras());
+
+
+       Sponsor saucony = new Sponsor();
+       Corredor Paul = new Corredor("Paul", true);
+       Paul.setPuntaje(16); // los hice de manera auxiliar para la prueba
+       Paul.setCantidadCarrerasParticipadas(2); // los hice de manera auxiliar para la prueba
+
+       Corredor Monica = new Corredor("Monica", true);
+       Monica.setCantidadCarrerasParticipadas(10);
+
+       CarreraDeAventura PatagorinaRun = new CarreraDeAventura("PatagoniaRun", 45,1900);
+       PatagorinaRun.anotar(Paul);
+
+       CarreraDeCalle CarreraMaya = new CarreraDeCalle("Carrera Maya",1000);
+       CarreraMaya.anotar(Didier);
+       CarreraMaya.anotar(Paul);
+       CarreraMaya.anotar(Monica);
+
+       saucony.patrocinar(PatagorinaRun);
+       saucony.patrocinar(Monica);
+
+       saucony.patrocinar(Paul);
+       saucony.patrocinar(CarreraMaya);
+       System.out.println(saucony.getCantidadPatrocinada());
 
 
     }
+
 }

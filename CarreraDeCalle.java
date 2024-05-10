@@ -3,7 +3,7 @@ import  java.util.HashSet;
 import java.util.Set;
 
 
-public class CarreraDeCalle extends Carrera{
+public class CarreraDeCalle extends Carrera implements Patrocinable{
 
     private HashSet<Corredor> corredores;
 
@@ -36,4 +36,13 @@ public class CarreraDeCalle extends Carrera{
     }
 
 
+    @Override
+    public boolean esPatrocinable() {
+       boolean bandera = false;
+       if (corredores.size() >= 100) {
+           bandera = true;
+       }
+       return bandera;
+
+    }
 }

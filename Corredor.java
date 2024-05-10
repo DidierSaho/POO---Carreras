@@ -2,7 +2,7 @@ import  java.util.ArrayList;
 import  java.util.HashSet;
 import java.util.Set;
 
-public class Corredor {
+public class Corredor implements Patrocinable {
     private String nombre;
     private Boolean certificadoAlDia;
     private int puntaje = 0;
@@ -28,7 +28,7 @@ public class Corredor {
    //aca iria la logica del maximo
 
     private int getMaximaDistancia(){
-       return 0
+       return 0;
     }
 
 
@@ -40,6 +40,10 @@ public class Corredor {
    public void setPuntaje(int puntaje) {
        this.puntaje += puntaje;
    }
+
+    public void setCantidadCarrerasParticipadas(int cantidad) {
+        this.cantidadCarrerasParticipadas += cantidad;
+    }
 
    public int getPuntaje(){
        return this.puntaje;
@@ -58,4 +62,12 @@ public class Corredor {
        return this.nombre;
   }
 
+    @Override
+    public boolean esPatrocinable() {
+        boolean bandera = false;
+        if(this.getCantidadCarreras() >3) {
+            bandera = true;
+        }
+        return bandera;
+    }
 }
