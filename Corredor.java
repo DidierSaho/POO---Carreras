@@ -1,15 +1,17 @@
 import  java.util.ArrayList;
 import  java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Corredor implements Patrocinable {
     private String nombre;
     private Boolean certificadoAlDia;
     private int puntaje = 0;
+
     private int distanciaMaxima = -9999;
     private int cantidadCarrerasParticipadas = 0;
 
-    private HashSet<Integer> distancias;
+    //private HashSet<Integer> distancias;
 
 
 
@@ -17,18 +19,21 @@ public class Corredor implements Patrocinable {
    public Corredor(String nombre, boolean certificadoAlDia){
        this.nombre = nombre;
        this.certificadoAlDia = certificadoAlDia;
-       distancias = new HashSet<>();
+       //distancias = new HashSet<>();// no usar hash
 
    }
 
    public void agregarDistancia(int distancia) {
-       distancias.add(distancia);
-   }
+       int valor = distancia;
+           if (valor > distanciaMaxima) {
+               distanciaMaxima = valor;
+           }
+       }
 
-   //aca iria la logica del maximo
 
-    private int getMaximaDistancia(){
-       return 0;
+
+    public int getMaximaDistancia(){
+       return distanciaMaxima;
     }
 
 

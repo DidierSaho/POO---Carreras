@@ -17,6 +17,9 @@ public class main {
 
        aventura.anotar(Didier);
        recreativa.anotar(Didier);
+       aventura.anotar(Didier);
+
+       System.out.println(Didier.getMaximaDistancia()); // funciona
 
 //       System.out.println(Didier.getPuntaje());
 //       System.out.println(Didier.getCantidadCarreras());
