@@ -5,6 +5,7 @@ public class main {
        CarreraRecreativa recreativa = new CarreraRecreativa("Carrera Recreativa", 40);
 
 
+
        Corredor Didier = new Corredor("Didier", true);
        Corredor Carlos = new Corredor("Carlos", true);
        Corredor Pedro = new Corredor("Pedro", false);

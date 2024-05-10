@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class borrador {
     public static void main(String[] args) {
-        int mayor = -99999999;
+        int mayor = -999999;
         Scanner scanner = new Scanner(System.in);
         int valor = 0;
 

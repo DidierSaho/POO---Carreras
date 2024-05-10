@@ -8,12 +8,13 @@ public class CarreraDeCalle extends Carrera implements Patrocinable{
     private HashSet<Corredor> corredores;
 
 
+
     protected CarreraDeCalle(String nombre, int distancia) {
         super(nombre, distancia);
         corredores = new HashSet<>();
     }
 
-
+    @Override
     public void anotar(Corredor corredor) {
        if (this.distancia >= 10 && corredor.getCertificado()) {
            corredores.add(corredor);
